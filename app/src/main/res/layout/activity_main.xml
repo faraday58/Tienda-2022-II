@@ -9,6 +9,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background"
+        android:layout_above="@id/btmNavigationPrincipal"
         android:id="@+id/fragmentContenedor"
         />
 
@@ -17,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/design_default_color_on_primary"
-
+        android:background="@color/design_default_color_primary"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_navigation_botom"
         />
-
 
 </RelativeLayout>
