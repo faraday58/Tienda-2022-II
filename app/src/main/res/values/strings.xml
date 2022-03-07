@@ -6,6 +6,8 @@
     <string name="nav_menu_comprar">Comprar</string>
     <string name="nav_menu_inicia">Sesión</string>
     <string name="string_txtv_seleccionado">Elemento Seleccionado</string>
+    <string name="strMenSalvar">Salvar</string>
+    <string name="strMenCargar">Cargar</string>
 
     <array name="string_productos">
         <item>Mochila </item>
