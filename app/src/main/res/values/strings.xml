@@ -5,4 +5,13 @@
     <string name="nav_menu_buscar">Buscar</string>
     <string name="nav_menu_comprar">Comprar</string>
     <string name="nav_menu_inicia">Sesión</string>
+    <string name="string_txtv_seleccionado">Elemento Seleccionado</string>
+
+    <array name="string_productos">
+        <item>Mochila </item>
+        <item>Laptop</item>
+        <item>Libro </item>
+        <item>Paracetamol</item>
+    </array>
+
 </resources>
