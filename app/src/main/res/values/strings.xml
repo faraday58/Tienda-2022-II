@@ -5,4 +5,15 @@
     <string name="nav_menu_buscar">Buscar</string>
     <string name="nav_menu_comprar">Comprar</string>
     <string name="nav_menu_inicia">Sesión</string>
+    <string name="strMenSalvar">Salvar</string>
+    <string name="strMenCargar">Cargar</string>
+    <string name="strTextSalvar">Archivo guardado</string>
+
+    <array name="string_productos">
+        <item>Zapatos</item>
+        <item>Mochilas</item>
+        <item>Teléfonos</item>
+        <item>Tablets</item>
+
+    </array>
 </resources>
