@@ -48,6 +48,7 @@
             android:layout_marginRight="5dp"
             />
         <EditText
+            android:id="@+id/edtUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="usuario"
@@ -68,6 +69,7 @@
             android:layout_marginRight="5dp"
             />
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,16 +86,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirme:"
+            android:text="Password:"
             android:layout_marginRight="5dp"
             />
         <EditText
+            android:id="@+id/edtPasswordConfirmar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="Confirmar contraseña"
             android:layout_weight="1"
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
     <Button
+        android:id="@+id/btnSalvar"
+        android:inputType="textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
