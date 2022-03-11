@@ -2,7 +2,9 @@ package mx.unam.unica.tienda2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +27,19 @@ public class SesionActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         btnEntrar = findViewById(R.id.btnEntrar);
         btnEntrar.setOnClickListener(onClickEntrar);
+        cargarPreferencias();
+
+    }
+
+    private void cargarPreferencias()
+    {
+    SharedPreferences preferences = getSharedPreferences(getResources().getString(R.string.strCredenciales),Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor= preferences.edit();
+
+    String user = preferences.getString(getResources().getString(R.string.strUser),getResources().getString(R.string.strNoUsuarios));
+    String password= preferences.getString(getResources().getString(R.string.strPassword),"");
+    edtNombre.setText(user);
+    edtPassword.setText(password);
 
     }
 
@@ -57,7 +72,11 @@ public class SesionActivity extends AppCompatActivity {
             Log.d("Login","Error en los dados: "+error.toString() );
         }
 
-        if ( usuario.equals("armando") && password.equals("armando")  )
+        if (!password.equals(""))
+        {
+            return false;
+        }
+        else if ( usuario.equals(getResources().getString(R.string.strUser)) && password.equals(getResources().getString(R.string.strPassword))  )
         {
             return true;
         }

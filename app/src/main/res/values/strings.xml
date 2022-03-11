@@ -8,12 +8,17 @@
     <string name="strMenSalvar">Salvar</string>
     <string name="strMenCargar">Cargar</string>
     <string name="strTextSalvar">Archivo guardado</string>
+    <string name="strCredenciales">Credenciales</string>
+    <string name="strUser">user</string>
+    <string name="strNoUsuarios">No hay usuario registrado</string>
+    <string name="strPassword">password</string>
 
     <array name="string_productos">
         <item>Zapatos</item>
         <item>Mochilas</item>
         <item>Teléfonos</item>
         <item>Tablets</item>
-
     </array>
+
+
 </resources>
