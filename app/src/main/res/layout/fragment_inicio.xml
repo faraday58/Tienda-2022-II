@@ -5,6 +5,7 @@
     android:orientation="vertical"
     >
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actvSeleccionado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/string_txtv_seleccionado"
