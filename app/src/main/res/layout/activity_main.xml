@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
     <FrameLayout
         android:id="@+id/fragmentContenedor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/btmNavigationPrincipal" />
+        android:layout_above="@id/btmNavigationPrincipal"
+        android:layout_below="@+id/toolbarMain" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btmNavigationPrincipal"

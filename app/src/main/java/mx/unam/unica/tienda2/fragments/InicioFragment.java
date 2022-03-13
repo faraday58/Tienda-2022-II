@@ -30,6 +30,7 @@ import mx.unam.unica.tienda2.R;
 
 public class InicioFragment extends Fragment {
 
+
     private static final String FILE_NAME = "archivoSelect.txt" ;
     private ListView lstProductos;
     private String [] productos;

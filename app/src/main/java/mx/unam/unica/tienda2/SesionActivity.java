@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,10 +17,13 @@ import android.widget.Toast;
 public class SesionActivity extends AppCompatActivity {
     private EditText edtNombre;
     private EditText edtPassword;
+    private TextView txtvTiempo;
     private Button btnEntrar;
     private String usuario="";
     private String password="";
     private TextView txtvRegistro;
+    private Runnable runtiempo;
+    private Handler manejador= new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +34,32 @@ public class SesionActivity extends AppCompatActivity {
         btnEntrar = findViewById(R.id.btnEntrar);
         btnEntrar.setOnClickListener(onClickEntrar);
         txtvRegistro= findViewById(R.id.txtvRegistro);
+        txtvTiempo= findViewById(R.id.txtvTiempo);
         cargarPreferencias();
+        ManejadorTiempo();
         txtvRegistro.setOnClickListener(onClickReg);
+    }
+
+    private void ManejadorTiempo() {
+
+        runtiempo= new Runnable() {
+            @Override
+            public void run() {
+                int valor = Integer.parseInt(txtvTiempo.getText().toString());
+                if (valor == 0)
+                {
+                    finish();
+                }
+                else
+                {
+                    valor --;
+                    txtvTiempo.setText(String.valueOf(valor));
+                    manejador.postDelayed(this,1000);
+                }
+            }
+        };
+        manejador.postDelayed(runtiempo,0);
+
     }
 
     private void cargarPreferencias() {
@@ -83,6 +112,7 @@ public class SesionActivity extends AppCompatActivity {
 
         if ( usuario.equals("armando") && password.equals("armando")  )
         {
+            manejador.removeCallbacks(runtiempo);
             return true;
         }
         else
