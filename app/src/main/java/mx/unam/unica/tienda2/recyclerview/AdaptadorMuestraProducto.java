@@ -31,12 +31,13 @@ public class AdaptadorMuestraProducto extends RecyclerView.Adapter<AdaptadorMues
 
   @Override
   public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+      MuestraProducto producto= productos.get(position);
+      holder.imgCVcoleccion.setImageResource(producto.getImagen());
   }
 
   @Override
   public int getItemCount() {
-    return 0;
+    return productos.size();
   }
 
   public static class ViewHolder extends RecyclerView.ViewHolder{
