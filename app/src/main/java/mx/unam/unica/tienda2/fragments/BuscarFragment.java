@@ -30,6 +30,7 @@ public class BuscarFragment extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rcvProductos.setLayoutManager(llm);
+        InicializarProductos();
         InicializarAdaptador();
 
            return v;

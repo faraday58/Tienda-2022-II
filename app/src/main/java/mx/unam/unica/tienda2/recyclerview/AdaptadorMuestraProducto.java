@@ -49,7 +49,7 @@ public class AdaptadorMuestraProducto extends RecyclerView.Adapter<AdaptadorMues
       super(itemView);
       txtCvTitulo= itemView.findViewById(R.id.txCvTitulo);
       txtCvDescribe= itemView.findViewById(R.id.txtCvDescribe);
-      imgCVcoleccion= itemView.findViewById(R.id.btnCVcoleccion);
+      imgCVcoleccion= itemView.findViewById(R.id.imgbCVProducto);
     }
   }
 
