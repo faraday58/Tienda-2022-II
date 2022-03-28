@@ -32,6 +32,8 @@ public class AdaptadorMuestraProducto extends RecyclerView.Adapter<AdaptadorMues
   @Override
   public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
       MuestraProducto producto= productos.get(position);
+      holder.txtCvTitulo.setText(producto.getTitulo());
+      holder.txtCvDescribe.setText(producto.getDescripcion());
       holder.imgCVcoleccion.setImageResource(producto.getImagen());
   }
 

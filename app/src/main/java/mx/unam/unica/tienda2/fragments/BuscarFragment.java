@@ -45,7 +45,7 @@ public class BuscarFragment extends Fragment {
     private void InicializarProductos(){
         productos= new ArrayList<>();
         productos.add(new MuestraProducto("Estrena",R.drawable.tenisblancos,"Justo"));
-        productos.add(new MuestraProducto("Estrena",R.drawable.teniscasual,"Justo"));
-        productos.add(new MuestraProducto("Estrena",R.drawable.zapatos,"Justo"));
+        productos.add(new MuestraProducto("Discreto",R.drawable.teniscasual,"Momento oportuno"));
+        productos.add(new MuestraProducto("Casuales",R.drawable.zapatos,"En familia o el trabajo"));
     }
 }
