@@ -76,6 +76,8 @@ public class LoginAuth extends AppCompatActivity  {
 
     private void CargarPorveedores() {
         proveedores= Arrays.asList(
+                new AuthUI.IdpConfig.GitHubBuilder().build(),
+          new AuthUI.IdpConfig.EmailBuilder().build(),
           new AuthUI.IdpConfig.GoogleBuilder().build() //Agrega un botón con las rutinas necesarias para la autenticación
         );
     }
