@@ -52,7 +52,9 @@ public class BuscarFragment extends Fragment {
 
     private FirestoreRecyclerOptions Consulta()
     {
-        Query query = mFirestore.collection("Producto");
+
+        //La consulta se realiza en esta sección
+        Query query = mFirestore.collection("Producto").whereEqualTo("descripcion","En familia o en el trabajo");
         FirestoreRecyclerOptions<MuestraProducto> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<MuestraProducto>()
                 .setQuery(query,MuestraProducto.class).build();
         return firestoreRecyclerOptions;
