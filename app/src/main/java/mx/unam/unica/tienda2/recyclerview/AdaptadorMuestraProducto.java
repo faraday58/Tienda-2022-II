@@ -1,5 +1,6 @@
 package mx.unam.unica.tienda2.recyclerview;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,10 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-import java.util.ArrayList;
 
 import mx.unam.unica.tienda2.R;
 
@@ -25,14 +26,20 @@ public class AdaptadorMuestraProducto extends FirestoreRecyclerAdapter<MuestraPr
    *
    * @param options
    */
-  public AdaptadorMuestraProducto(@NonNull FirestoreRecyclerOptions<MuestraProducto> options) {
+  // Es para indicar el  Activity de donde se obtiene el recurso
+  private Context context;
+  public AdaptadorMuestraProducto(@NonNull FirestoreRecyclerOptions<MuestraProducto> options, Context context) {
     super(options);
+    this.context= context;
   }
 
   @Override
   protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull MuestraProducto producto) {
     holder.txtCvTitulo.setText(producto.getTitulo() );
     holder.txtCvDescribe.setText(producto.getDescripcion());
+    Glide.with(context)
+            .load(producto.getImagen())
+            .into(holder.imgCVcoleccion);
   }
 
   @NonNull

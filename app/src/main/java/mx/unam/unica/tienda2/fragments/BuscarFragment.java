@@ -45,7 +45,7 @@ public class BuscarFragment extends Fragment {
     }
 
     private void InicializarAdaptador() {
-        mAdapter= new AdaptadorMuestraProducto(Consulta());
+        mAdapter= new AdaptadorMuestraProducto(Consulta(),getContext());
         mAdapter.notifyDataSetChanged();
         rcvProductos.setAdapter(mAdapter);
     }
